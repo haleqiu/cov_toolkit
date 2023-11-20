@@ -48,7 +48,7 @@ Sparsification plots are commonly considered as a good way to evaluate the quali
 
 We can also calculate Cov_AUC/Oracle_AUC (DAUC) to evaluate the quality in different pictures.
 
-![AUC](./assets/auc.png)
+![AUC](./assets/AUC.png)
 
 These methods can be used equally well in the training process of uncertainty networks.
 
