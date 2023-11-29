@@ -42,13 +42,37 @@ Sparsification plots are commonly considered as a good way to evaluate the quali
 
 - Finally, we can calculate the area under the curve (AUC) to compare the performance of different uncertainty measures over an entire dataset.
 
-![Sparsification Plot](./assets/sparsification_plot.png)
+![Sparsification Plot](./sparsification_plot.png)
 
 [ProbFlow](https://arxiv.org/abs/1708.06509) calculates the CC between the Oracle curve and the estimated uncertainty curve, which estimates how well the examined uncertainty values can be mapped onto the corresponding endpoint errors using an arbitrary monotonic function.
 
 We can also calculate Cov_AUC/Oracle_AUC (DAUC) to evaluate the quality in different pictures.
 
 ![AUC](./assets/AUC.png)
+
+## Example
+
+This repo provides a simple example to show how to use these tools.
+To run `example.py`, you need to provide the following files:
+
+- `mse.npy`: the EPE map of the estimated flow, shape: (H, W)
+- `cov.npy`: the estimated covariance, shape: (H, W)
+
+Put these two files in the same directory as `example.py`, then run:
+
+```bash
+python example.py
+```
+
+required packages:
+
+- numpy
+- matplotlib
+- scipy
+  
+~~pandas (optional)~~
+
+## Others
 
 These methods can be used equally well in the training process of uncertainty networks.
 
